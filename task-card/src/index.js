@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css';
 import FirstList from './App';
+import MainWindow from "./MainWindow"
 import * as serviceWorker from './serviceWorker';
 
 
-ReactDOM.render(<FirstList />, document.getElementById('root'));
+ReactDOM.render(<MainWindow />, document.getElementById('root'));
 
 
 // If you want your app to work offline and load faster, you can change
