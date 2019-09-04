@@ -36,33 +36,43 @@ class MainWindow extends React.Component {
         );
     }
 
+    renderInformation(key, value){
+        return(
+            <p className="card-text">{key}: {value}</p>
+        );
+    }
 
-    render() {
-        let elem = [1, 2, 3, 4, 5];
-        return (
-            <div className="row">
-                <div className="col-sm-6">
-                    <div className="card" style={{width: "20rem", height: "40rem"}}>
-                        <img src={require('./UserIcon.png')} className="card-img-top" alt="..."></img>
-                        <div className="card-body">
-                            <h5 className="card-title">Название карточки</h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up
-                                the
-                                bulk of the card's content.</p>
-                        </div>
+    renderUser(){
+        let user = {
+            name: "Бессонов",
+            jobPosition: "Инженер",
+            phoneNumber: "123-45-67",
+            mailAddress: "besson@mail.ru"
+        };
+
+        return(
+            <div className="col-sm-6">
+                <div className="card" style={{width: "20rem", height: "40rem"}}>
+                    <img src={require('./UserIcon.png')} className="card-img-top" alt="..."></img>
+                    <div className="card-body">
+                        {Object.entries(user).map(([key1, value1]) => this.renderInformation(key1, value1))}
                     </div>
                 </div>
+            </div>
+        );
+    }
+
+
+    render() {
+        let elems = [1, 2, 3, 4, 5];
+        return (
+            <div className="row">
+                {this.renderUser()}
                 <div className="col-sm-6">
-                    <div className="card" style={{width: "50rem", height: "40rem"}}>
+                    <div className="card" style={{width: "20rem", height: "40rem"}}>
                         <div className="card-body">
                             <h5 className="card-title">Список задач</h5>
-                            {/*{elem.map() => this.renderTask(elem, "Задача")}*/}
-
-
-
-                            {/*{for(let i = 0; i < 5; i++){*/}
-                                {/*renderTask(i, "Задача");*/}
-                            {/*}}*/}
+                            {elems.map(elem => this.renderTask(elem, "Задача"))}
 
                         </div>
                     </div>
