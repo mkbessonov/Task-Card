@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import LeftPanel from "./leftPanel";
 import RightPanel from "./rightContainer";
+import SecondRightPanel from "./secondRightContainer";
 
 class MainWindow extends React.Component {
     render() {
@@ -13,7 +14,8 @@ class MainWindow extends React.Component {
                 <div className="container-fluid">
                     <div className="row">
                         <LeftPanel/>
-                        <RightPanel/>
+                        {/*<RightPanel/>*/}
+                        <SecondRightPanel/>
                     </div>
                 </div>
             </div>

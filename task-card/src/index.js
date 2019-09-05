@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css';
-import FirstList from './App';
-import MainWindow from "./MainWindow"
+import FirstList from './login';
+import MainWindow from "./mainWindow"
 import * as serviceWorker from './serviceWorker';
 
 
