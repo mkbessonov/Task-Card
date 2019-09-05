@@ -1,3 +1,38 @@
-.vtb-header{
-    background-color: #0a2896;
+.vtb-header {
+    background-color: #00367c;
+    height: 50px;
+}
+
+.vtb-logo img {
+    position: absolute;
+    z-index: 1000;
+    top: 10px;
+    left: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.vtb-logo {
+    height: 80px;
+}
+
+.vtb-user-photo {
+    width: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid #00367c;
+    margin: 15px;
+}
+
+.card {
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #00367c;
+    min-height: 450px;
+    width: 250px;
+}
+
+.card-body {
+    width: 100%;
+    background-color: white;
 }

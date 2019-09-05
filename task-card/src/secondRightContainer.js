@@ -2,6 +2,10 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 
 class SecondRightPanel extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {date: new Date()};
+    }
 
     renderInformation(task) {
         return (
@@ -22,8 +26,8 @@ class SecondRightPanel extends React.Component {
         };
         let elems = [1, 2, 3, 4, 5];
         return (
-            <div className="col-sm-6">
-                <div className="card" style={{width: "20rem", height: "40rem"}}>
+            <div className="col-sm-9">
+                <div className="card" style={{width: "100%"}}>
                     <div className="card-body">
                         <h5 className="card-title">Информация о задаче</h5>
                         {Object.entries(information).map(([value]) => this.renderInformation(value))}

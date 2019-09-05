@@ -18,9 +18,10 @@ class LeftPanel extends React.Component {
         };
 
         return (
-            <div className="col-sm-6">
-                <div className="card" style={{width: "20rem", height: "40rem"}}>
-                    <img src={require('./UserIcon.png')} className="card-img-top" alt="..."></img>
+            <div>
+                <div className="card  d-flex align-items-center">
+                    <div className="vtb-user-photo">
+                        <img src={require('./UserIcon.png')} className="card-img-top" alt="..."></img></div>
                     <div className="card-body">
                         {Object.entries(user).map(([key, value]) => this.renderInformation(key, value))}
                     </div>

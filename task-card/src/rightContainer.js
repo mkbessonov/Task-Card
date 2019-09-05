@@ -1,9 +1,12 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 
-class RightPanel extends React.Component {
+class RightPanel1 extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
-    renderTask(i, task) {
+    renderTask(task) {
         return (
             <div>
                 <a href="#" className="card-link">{i + ". " + task}</a>
@@ -12,20 +15,47 @@ class RightPanel extends React.Component {
     }
 
     render() {
-        let elems = [1, 2, 3, 4, 5];
+        let elems = [{
+            id: 1,
+            name: "Задача 1",
+            term: "15.09.2019",
+            gaveOut: "Supervisor",
+            description: "Описание задачи",
+            executor: "Бессонов",
+            dateCreation: "01.09.2019",
+            dateCompletion: "Not complete"
+        },{
+            id: 2,
+            name: "Задача 2",
+            term: "15.09.2019",
+            gaveOut: "Supervisor",
+            description: "Описание задачи",
+            executor: "Бессонов",
+            dateCreation: "01.09.2019",
+            dateCompletion: "Not complete"
+        },{
+            id: 3,
+            name: "Задача 3",
+            term: "15.09.2019",
+            gaveOut: "Supervisor",
+            description: "Описание задачи",
+            executor: "Бессонов",
+            dateCreation: "01.09.2019",
+            dateCompletion: "Not complete"
+        } ];
         return (
-            <div className="col-sm-6">
-                <div className="card" style={{width: "20rem", height: "40rem"}}>
+            <div className="col-sm-9">
+                <div className="card" style={{width: "100%"}}>
                     <div className="card-body">
                         <h5 className="card-title">Список задач</h5>
-                        {elems.map(elem => this.renderTask(elem, "Задача"))}
-
+                        {elems.map(elem => this.renderTask(elem))}
                     </div>
                 </div>
             </div>
         );
     }
+
 }
 
 
-export default RightPanel;
+export default RightPanel1;

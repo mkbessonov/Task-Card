@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import {withRouter} from 'react-router-dom';
+import history from './history'
 require('./login.css');
 
 class Login extends React.Component {
@@ -22,12 +23,16 @@ class Login extends React.Component {
         this.setState({
             [name]: value
         });
-        //console.log();
     }
 
     clickFirstButton() {
         console.log(this.state.login, this.state.password);
-        this.browserHistory.push('/sample');
+        if (this.state.login === '1' && this.state.password === '1') {
+            history.push('#/main');
+            history.go();
+        } else {
+            alert("Неверный логин/пароль")
+        }
     }
 
 
