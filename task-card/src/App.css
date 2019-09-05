@@ -31,3 +31,7 @@
     transform: rotate(360deg);
   }
 }
+
+.vtb-header{
+  background-color: #0a2896;
+}
