@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 
-class RightPanel1 extends React.Component {
+class FirstRightPanel extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -9,7 +9,7 @@ class RightPanel1 extends React.Component {
     renderTask(task) {
         return (
             <div>
-                <a href="#" className="card-link">{i + ". " + task}</a>
+                <a href="#" className="card-link">{task}</a>
             </div>
         );
     }
@@ -58,4 +58,4 @@ class RightPanel1 extends React.Component {
 }
 
 
-export default RightPanel1;
+export default FirstRightPanel;
