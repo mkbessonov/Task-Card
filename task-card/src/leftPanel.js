@@ -46,5 +46,4 @@ class LeftPanel extends React.Component {
     }
 }
 
-
 export default LeftPanel;

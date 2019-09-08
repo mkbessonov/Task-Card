@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import './index.css';
 import MainWindow from "./mainWindow"
 import * as serviceWorker from './serviceWorker';
 import Login from './login';

@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import {withRouter} from 'react-router-dom';
 import history from './history'
+
 require('./login.css');
 
 class Login extends React.Component {
@@ -14,12 +15,10 @@ class Login extends React.Component {
         this.handleInputChange = this.handleInputChange.bind(this);
     }
 
-
     handleInputChange(event) {
         const target = event.target;
         const value = target.value;
         const name = target.name;
-
         this.setState({
             [name]: value
         });
@@ -34,7 +33,6 @@ class Login extends React.Component {
             alert("Неверный логин/пароль")
         }
     }
-
 
     render() {
         return (
