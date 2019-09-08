@@ -4,8 +4,23 @@ import 'bootstrap/dist/css/bootstrap.css';
 class LeftPanel extends React.Component {
 
     renderInformation(key, value) {
+        let russianName = '';
+        switch (key) {
+            case 'name':
+                russianName = 'Пользователь';
+                break;
+            case 'jobPosition':
+                russianName = 'Должность';
+                break;
+            case 'phoneNumber':
+                russianName = 'Телефон';
+                break;
+            case 'mailAddress':
+                russianName = 'Почта';
+                break;
+        }
         return (
-            <p className="card-text">{key}: {value}</p>
+            <p className="card-text">{russianName}: {value}</p>
         );
     }
 

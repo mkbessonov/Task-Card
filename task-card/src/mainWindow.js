@@ -11,10 +11,6 @@ class MainWindow extends React.Component {
 
         this.state = {
             date: this.taskFirst()
-            //date: this.taskSecond(2)
-            // currentTask: {},
-            // isTaskPanel: false
-
         };
     }
 
@@ -22,7 +18,6 @@ class MainWindow extends React.Component {
         let valueId;
         valueId = Number(id);
         valueId--;
-        //console.log("id = " + valueId);
         this.setState({date: this.taskSecond(valueId)})
     }
 
@@ -39,7 +34,6 @@ class MainWindow extends React.Component {
                 >
                     {task.name}
                 </div>
-
             </div>
         );
     }
@@ -54,9 +48,36 @@ class MainWindow extends React.Component {
     }
 
     renderTaskSecond1(task, nameObject) {
+        let russianName = '';
+        switch (task) {
+            case 'id':
+                russianName = 'Идентификатор';
+                break;
+            case 'name':
+                russianName = 'Название задачи';
+                break;
+            case 'term':
+                russianName = 'Дата завершения';
+                break;
+            case 'gaveOut':
+                russianName = 'Автор задачи';
+                break;
+            case 'description':
+                russianName = 'О задаче';
+                break;
+            case 'executor':
+                russianName = 'Исполнитель';
+                break;
+            case 'dateCreation':
+                russianName = 'Дата создания';
+                break;
+            case 'dateCompletion':
+                russianName = 'Состояние';
+                break;
+        }
         return (
             <div>
-                {task + ":  " + nameObject[task]}
+                <span style = {{fontWeight: 400}}>{russianName+":  "}</span>{nameObject[task]}
             </div>
         );
     }
@@ -89,8 +110,6 @@ class MainWindow extends React.Component {
                     </button>
                 </div>
             </div>
-
-
         );
     }
 
@@ -112,9 +131,6 @@ class MainWindow extends React.Component {
                                 </div>
                             </div>
                         </div>
-
-                        {/*<SecondRightPanel currentTask={this.state.currentTask}/>*/}
-
                     </div>
                 </div>
             </div>
@@ -126,7 +142,7 @@ const elems = [{
     id: "1",
     name: "Задача 1",
     term: "25.09.2019",
-    "gave Out": "Supervisor",
+    gaveOut: "Supervisor",
     description: "Описание задачи",
     executor: "Бессонов",
     dateCreation: "05.09.2019",
