@@ -27,7 +27,7 @@ class MainWindow extends React.Component {
 
     renderTaskFirst(task) {
         return (
-            <div>
+            <div key={task.id}>
                 <div
                     className="vtb-list"
                     onClick={() => this.click(task.id)}
@@ -77,7 +77,7 @@ class MainWindow extends React.Component {
         }
         return (
             <div>
-                <span style = {{fontWeight: 400}}>{russianName+":  "}</span>{nameObject[task]}
+                <span style={{fontWeight: 400}}>{russianName + ":  "}</span>{nameObject[task]}
             </div>
         );
     }

@@ -20,7 +20,7 @@ class LeftPanel extends React.Component {
                 break;
         }
         return (
-            <p className="card-text">{russianName}: {value}</p>
+            <p className="card-text" key={key}>{russianName}: {value}</p>
         );
     }
 
