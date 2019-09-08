@@ -36,3 +36,28 @@
     width: 100%;
     background-color: white;
 }
+
+.vtb-list {
+    font-size: 20pt;
+    cursor: pointer;
+    font-weight: 300;
+    border-bottom: 1px solid #00367c;
+    padding: 10px;
+}
+
+.vtb-about-task {
+    font-size: 18pt;
+    font-weight: 300;
+    padding: 10px 0;
+}
+
+.vtb-header-task {
+    font-size: 24pt;
+    font-weight: 400;
+    padding: 16px 0;
+}
+
+.btn-primary{
+    background-color: #00367c;
+    border-color: #00367c;
+}

@@ -26,19 +26,19 @@ class MainWindow extends React.Component {
         this.setState({date: this.taskSecond(valueId)})
     }
 
-    clickOut(){
-        this.setState({ date: this.taskFirst()})
+    clickOut() {
+        this.setState({date: this.taskFirst()})
     }
 
     renderTaskFirst(task) {
         return (
             <div>
-                <button
-                    className="card-link"
+                <div
+                    className="vtb-list"
                     onClick={() => this.click(task.id)}
                 >
                     {task.name}
-                </button>
+                </div>
 
             </div>
         );
@@ -47,7 +47,7 @@ class MainWindow extends React.Component {
 
     renderTaskSecond(task) {
         return (
-            <div>
+            <div className="vtb-about-task">
                 {Object.entries(task).map(([value]) => this.renderTaskSecond1(value, task))}
             </div>
         );
@@ -65,7 +65,7 @@ class MainWindow extends React.Component {
         let value = "first";
         return (
             <div>
-                <h5 className="card-title">Список задач</h5>
+                <div className="vtb-header-task">Список задач</div>
                 {elems.map(elem => this.renderTaskFirst(elem))}
             </div>
 
@@ -75,12 +75,15 @@ class MainWindow extends React.Component {
     taskSecond(number) {
         return (
             <div>
+                <div className="vtb-header-task">
+                    Информация о задаче
+                </div>
                 <div>
                     {this.renderTaskSecond(elems[number])}
                 </div>
                 <div>
-                    <button
-                        onClick={() => this.clickOut()}
+                    <button className="btn btn-primary"
+                            onClick={() => this.clickOut()}
                     >
                         Вернуться в меню
                     </button>
@@ -90,15 +93,6 @@ class MainWindow extends React.Component {
 
         );
     }
-
-    componentDidMount() {
-
-    }
-
-    componentWillUnmount() {
-
-    }
-
 
     render() {
         return (
